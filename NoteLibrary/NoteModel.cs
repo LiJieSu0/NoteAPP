@@ -23,14 +23,12 @@ namespace NoteLibrary
         public DateTime createdTime { get; set; }
         public DateTime updatedTime { get; set; }
 
-        public NoteModel(CreatorModel Creator, string NoteTitle, string NoteContent,NoteType _noteType)
-        {
-            this.Creator= Creator;
+        public NoteModel(CreatorModel Creator,string NoteContent,string NoteTitle) {
+            this.Creator = Creator;
+            this.NoteContent = NoteContent;
             this.NoteTitle = NoteTitle;
-            this.NoteContent= NoteContent;
-            this._noteType= _noteType;
+        
         }
-
 
     }
 }

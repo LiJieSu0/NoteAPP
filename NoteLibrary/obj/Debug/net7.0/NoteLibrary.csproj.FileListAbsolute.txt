@@ -1,0 +1,12 @@
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\bin\Debug\net7.0\NoteLibrary.deps.json
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\bin\Debug\net7.0\NoteLibrary.dll
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\bin\Debug\net7.0\NoteLibrary.pdb
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\obj\Debug\net7.0\NoteLibrary.csproj.AssemblyReference.cache
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\obj\Debug\net7.0\NoteLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\obj\Debug\net7.0\NoteLibrary.AssemblyInfoInputs.cache
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\obj\Debug\net7.0\NoteLibrary.AssemblyInfo.cs
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\obj\Debug\net7.0\NoteLibrary.csproj.CoreCompileInputs.cache
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\obj\Debug\net7.0\NoteLibrary.dll
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\obj\Debug\net7.0\refint\NoteLibrary.dll
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\obj\Debug\net7.0\NoteLibrary.pdb
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteLibrary\obj\Debug\net7.0\ref\NoteLibrary.dll

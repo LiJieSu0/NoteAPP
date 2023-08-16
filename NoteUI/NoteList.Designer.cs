@@ -35,6 +35,7 @@
             createBtn = new Button();
             editBtn = new Button();
             deleteBtn = new Button();
+            myLabel = new Label();
             SuspendLayout();
             // 
             // searchTxtBox
@@ -70,6 +71,7 @@
             createBtn.TabIndex = 4;
             createBtn.Text = "Create";
             createBtn.UseVisualStyleBackColor = true;
+            createBtn.Click += createBtn_Click;
             // 
             // editBtn
             // 
@@ -89,12 +91,21 @@
             deleteBtn.Text = "Delete";
             deleteBtn.UseVisualStyleBackColor = true;
             // 
+            // myLabel
+            // 
+            myLabel.AutoSize = true;
+            myLabel.Location = new Point(526, 24);
+            myLabel.Name = "myLabel";
+            myLabel.Size = new Size(0, 38);
+            myLabel.TabIndex = 7;
+            // 
             // NoteListForm
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(704, 560);
+            Controls.Add(myLabel);
             Controls.Add(deleteBtn);
             Controls.Add(editBtn);
             Controls.Add(createBtn);
@@ -103,7 +114,7 @@
             Controls.Add(searchTxtBox);
             Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "NoteListForm";
             Text = "Note List";
             ResumeLayout(false);
@@ -117,5 +128,6 @@
         private Button createBtn;
         private Button editBtn;
         private Button deleteBtn;
+        private Label myLabel;
     }
 }
