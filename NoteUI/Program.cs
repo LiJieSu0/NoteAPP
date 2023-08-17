@@ -1,3 +1,6 @@
+using NoteLibrary;
+using System.Diagnostics;
+
 namespace NoteUI
 {
     internal static class Program

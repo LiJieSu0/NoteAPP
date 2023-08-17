@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Diagnostics;
+
 
 namespace NoteLibrary
 {
@@ -17,11 +19,21 @@ namespace NoteLibrary
         private IMongoCollection<NoteModel> _noteCollection;
         private IMongoCollection<CreatorModel> _creatorCollection;
         public DB_Connection(string connectionString)
-        {   
-            _client= new MongoClient(connectionString);
-            _database = _client.GetDatabase("NoteDB");
-            _noteCollection = _database.GetCollection<NoteModel>("notes");
-            _creatorCollection = _database.GetCollection<CreatorModel>("crators");
+        {
+            try
+            {
+                _client= new MongoClient(connectionString);
+                _database = _client.GetDatabase("NoteDB");
+                _noteCollection = _database.GetCollection<NoteModel>("notes");
+                _creatorCollection = _database.GetCollection<CreatorModel>("creators");
+                Debug.WriteLine("Connect Success!!");
+            }catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        public void CloseConnection()
+        {
         }
 
         public async Task InsertNote(NoteModel note)

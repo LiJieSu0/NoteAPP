@@ -32,14 +32,15 @@
             creatorLabel = new Label();
             creatorTxtBox = new TextBox();
             noteTxtBox = new TextBox();
-            textBox1 = new TextBox();
+            noteTitleTxtBox = new TextBox();
             NoteName = new Label();
             coeditCheckBox = new CheckBox();
             createBtn = new Button();
             noteTypeComboBox = new ComboBox();
             NoteTypeLabel = new Label();
-            textBox2 = new TextBox();
+            emailTxtBox = new TextBox();
             EmailLbel = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // creatorLabel
@@ -61,18 +62,18 @@
             // 
             // noteTxtBox
             // 
-            noteTxtBox.Location = new Point(12, 153);
+            noteTxtBox.Location = new Point(12, 194);
             noteTxtBox.Multiline = true;
             noteTxtBox.Name = "noteTxtBox";
-            noteTxtBox.Size = new Size(815, 435);
+            noteTxtBox.Size = new Size(815, 401);
             noteTxtBox.TabIndex = 2;
             // 
-            // textBox1
+            // noteTitleTxtBox
             // 
-            textBox1.Location = new Point(102, 89);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(725, 43);
-            textBox1.TabIndex = 6;
+            noteTitleTxtBox.Location = new Point(102, 89);
+            noteTitleTxtBox.Name = "noteTitleTxtBox";
+            noteTitleTxtBox.Size = new Size(725, 43);
+            noteTitleTxtBox.TabIndex = 6;
             // 
             // NoteName
             // 
@@ -101,6 +102,7 @@
             createBtn.TabIndex = 7;
             createBtn.Text = "Create";
             createBtn.UseVisualStyleBackColor = true;
+            createBtn.Click += createBtn_Click;
             // 
             // noteTypeComboBox
             // 
@@ -109,6 +111,7 @@
             noteTypeComboBox.Name = "noteTypeComboBox";
             noteTypeComboBox.Size = new Size(288, 45);
             noteTypeComboBox.TabIndex = 9;
+            noteTypeComboBox.SelectedIndexChanged += noteTypeComboBox_SelectedIndexChanged;
             // 
             // NoteTypeLabel
             // 
@@ -119,13 +122,13 @@
             NoteTypeLabel.TabIndex = 10;
             NoteTypeLabel.Text = "NoteType :";
             // 
-            // textBox2
+            // emailTxtBox
             // 
-            textBox2.Location = new Point(462, 22);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(365, 43);
-            textBox2.TabIndex = 12;
-            textBox2.TextChanged += textBox2_TextChanged;
+            emailTxtBox.Location = new Point(462, 22);
+            emailTxtBox.Name = "emailTxtBox";
+            emailTxtBox.Size = new Size(365, 43);
+            emailTxtBox.TabIndex = 12;
+            emailTxtBox.TextChanged += textBox2_TextChanged;
             // 
             // EmailLbel
             // 
@@ -135,7 +138,15 @@
             EmailLbel.Size = new Size(97, 38);
             EmailLbel.TabIndex = 11;
             EmailLbel.Text = "Email :";
-            EmailLbel.Click += label1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 140);
+            label1.Name = "label1";
+            label1.Size = new Size(121, 38);
+            label1.TabIndex = 13;
+            label1.Text = "Content:";
             // 
             // NoteCreateForm
             // 
@@ -143,13 +154,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(839, 687);
-            Controls.Add(textBox2);
+            Controls.Add(label1);
+            Controls.Add(emailTxtBox);
             Controls.Add(EmailLbel);
             Controls.Add(NoteTypeLabel);
             Controls.Add(noteTypeComboBox);
             Controls.Add(coeditCheckBox);
             Controls.Add(createBtn);
-            Controls.Add(textBox1);
+            Controls.Add(noteTitleTxtBox);
             Controls.Add(NoteName);
             Controls.Add(noteTxtBox);
             Controls.Add(creatorTxtBox);
@@ -168,13 +180,14 @@
         private Label creatorLabel;
         private TextBox creatorTxtBox;
         private TextBox noteTxtBox;
-        private TextBox textBox1;
+        private TextBox noteTitleTxtBox;
         private Label NoteName;
         private CheckBox coeditCheckBox;
         private Button createBtn;
         private ComboBox noteTypeComboBox;
         private Label NoteTypeLabel;
-        private TextBox textBox2;
+        private TextBox emailTxtBox;
         private Label EmailLbel;
+        private Label label1;
     }
 }

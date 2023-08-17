@@ -36,6 +36,7 @@
             editBtn = new Button();
             deleteBtn = new Button();
             myLabel = new Label();
+            closeBtn = new Button();
             SuspendLayout();
             // 
             // searchTxtBox
@@ -62,6 +63,7 @@
             searchBtn.TabIndex = 3;
             searchBtn.Text = "Search";
             searchBtn.UseVisualStyleBackColor = true;
+            searchBtn.Click += searchBtn_Click;
             // 
             // createBtn
             // 
@@ -75,7 +77,7 @@
             // 
             // editBtn
             // 
-            editBtn.Location = new Point(526, 281);
+            editBtn.Location = new Point(526, 163);
             editBtn.Name = "editBtn";
             editBtn.Size = new Size(137, 43);
             editBtn.TabIndex = 5;
@@ -84,7 +86,7 @@
             // 
             // deleteBtn
             // 
-            deleteBtn.Location = new Point(526, 495);
+            deleteBtn.Location = new Point(526, 235);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(137, 43);
             deleteBtn.TabIndex = 6;
@@ -99,12 +101,23 @@
             myLabel.Size = new Size(0, 38);
             myLabel.TabIndex = 7;
             // 
+            // closeBtn
+            // 
+            closeBtn.Location = new Point(526, 495);
+            closeBtn.Name = "closeBtn";
+            closeBtn.Size = new Size(137, 43);
+            closeBtn.TabIndex = 8;
+            closeBtn.Text = "Close";
+            closeBtn.UseVisualStyleBackColor = true;
+            closeBtn.Click += closeBtn_Click;
+            // 
             // NoteListForm
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(704, 560);
+            Controls.Add(closeBtn);
             Controls.Add(myLabel);
             Controls.Add(deleteBtn);
             Controls.Add(editBtn);
@@ -117,6 +130,7 @@
             Margin = new Padding(6);
             Name = "NoteListForm";
             Text = "Note List";
+            Load += NoteListForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -129,5 +143,6 @@
         private Button editBtn;
         private Button deleteBtn;
         private Label myLabel;
+        private Button closeBtn;
     }
 }
