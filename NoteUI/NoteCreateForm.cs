@@ -15,7 +15,7 @@ namespace NoteUI
             Miscellaneous,
         }
          */
-        public NoteCreateForm(NoteListForm original)
+        public NoteCreateForm(NoteListForm original, PassNoteData noteData)
         {
             InitializeComponent();
             this.original = original;
@@ -57,16 +57,18 @@ namespace NoteUI
             string creatorEmail = emailTxtBox.Text;
             string noteTitle = noteTitleTxtBox.Text;
             string noteContent = noteTxtBox.Text;
-            bool isAllowedCoEdit =coeditCheckBox.Checked;
+            bool isAllowedCoEdit = coeditCheckBox.Checked;
             try
             {
-                DB_Connection connection= GlobalConfig.InitializeConnection();
+                DB_Connection connection = GlobalConfig.InitializeConnection();
                 CreatorModel creator = new CreatorModel(creatorName, creatorEmail);
                 NoteModel note = new NoteModel(creator, noteContent, noteTitle);
+                //creator.CreateNote(note);
                 await connection.InsertCreator(creator);
                 await connection.InsertNote(note);
                 isCreateSuccess = true;
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }
@@ -78,6 +80,11 @@ namespace NoteUI
                 this.Hide();
                 original.Show();
             }
+        }
+
+        private void NoteCreateForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

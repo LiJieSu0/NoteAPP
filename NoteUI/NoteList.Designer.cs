@@ -37,6 +37,7 @@
             deleteBtn = new Button();
             myLabel = new Label();
             closeBtn = new Button();
+            showBtn = new Button();
             SuspendLayout();
             // 
             // searchTxtBox
@@ -77,16 +78,17 @@
             // 
             // editBtn
             // 
-            editBtn.Location = new Point(526, 163);
+            editBtn.Location = new Point(526, 251);
             editBtn.Name = "editBtn";
             editBtn.Size = new Size(137, 43);
             editBtn.TabIndex = 5;
             editBtn.Text = "Edit";
             editBtn.UseVisualStyleBackColor = true;
+            editBtn.Click += editBtn_Click;
             // 
             // deleteBtn
             // 
-            deleteBtn.Location = new Point(526, 235);
+            deleteBtn.Location = new Point(526, 321);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(137, 43);
             deleteBtn.TabIndex = 6;
@@ -111,12 +113,23 @@
             closeBtn.UseVisualStyleBackColor = true;
             closeBtn.Click += closeBtn_Click;
             // 
+            // showBtn
+            // 
+            showBtn.Location = new Point(526, 172);
+            showBtn.Name = "showBtn";
+            showBtn.Size = new Size(137, 43);
+            showBtn.TabIndex = 9;
+            showBtn.Text = "Show";
+            showBtn.UseVisualStyleBackColor = true;
+            showBtn.Click += showBtn_Click;
+            // 
             // NoteListForm
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(704, 560);
+            Controls.Add(showBtn);
             Controls.Add(closeBtn);
             Controls.Add(myLabel);
             Controls.Add(deleteBtn);
@@ -144,5 +157,6 @@
         private Button deleteBtn;
         private Label myLabel;
         private Button closeBtn;
+        private Button showBtn;
     }
 }

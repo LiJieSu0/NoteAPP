@@ -16,7 +16,7 @@ namespace NoteLibrary
         }
         public string Name { get; set; }
         public string Email { get; set; }
-        public Dictionary<PermissionType,NoteModel> NotePermitDict { get; set; }
+        public Dictionary<PermissionType, NoteModel> NotePermitDict = new Dictionary<PermissionType, NoteModel>();
 
         public CreatorModel(string Name,string Email) 
         { 

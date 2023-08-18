@@ -171,6 +171,7 @@
             Margin = new Padding(6);
             Name = "NoteCreateForm";
             Text = "Create A Note";
+            Load += NoteCreateForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

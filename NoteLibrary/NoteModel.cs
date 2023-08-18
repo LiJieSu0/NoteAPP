@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace NoteLibrary
         public List<String>? EditorList { get; set; }
         public DateTime createdTime { get; set; }
         public DateTime updatedTime { get; set; }
-
+        public ObjectId _id { get; set; }
         public NoteModel(CreatorModel Creator,string NoteContent,string NoteTitle) {
             this.Creator = Creator;
             this.NoteContent = NoteContent;
