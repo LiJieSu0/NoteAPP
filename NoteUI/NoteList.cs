@@ -45,7 +45,11 @@ namespace NoteUI
         private void createBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            NoteCreateForm noteCreateForm = new NoteCreateForm(this);
+            PassNoteData data = new PassNoteData();
+            data.noteTitle = "";
+            data.isEditable = true;
+            data.isCreator = false;
+            NoteCreateForm noteCreateForm = new NoteCreateForm(this,data);
             noteCreateForm.Show();
         }
 

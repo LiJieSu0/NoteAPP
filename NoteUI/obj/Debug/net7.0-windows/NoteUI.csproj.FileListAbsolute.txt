@@ -33,3 +33,4 @@ C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteUI\bin\Debug\net7.0-windows\runtimes\w
 C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteUI\bin\Debug\net7.0-windows\NoteLibrary.dll
 C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteUI\bin\Debug\net7.0-windows\NoteLibrary.pdb
 C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteUI\obj\Debug\net7.0-windows\NoteUI.csproj.CopyComplete
+C:\Users\KanSu\Desktop\C#\NoteLibrary\NoteUI\obj\Debug\net7.0-windows\NoteUI.LoginForm.resources
